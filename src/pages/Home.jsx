@@ -1,5 +1,7 @@
+import "./Home.component.scss";
+
 function Home() {
-  return <div>Home</div>;
+  return <div className="home-brand">Mag Olvr</div>;
 }
 
 export default Home;
