@@ -8,8 +8,8 @@ import { Link } from "react-router";
 function DefaultLayout() {
   return (
     <>
-      <HeaderNav title={"Mag Olvr"}>
-        <ul>
+      <HeaderNav title={"mo"}>
+        <ul className="menu-list">
           <li>
             <Link to={"./"}>
               <span>Home</span>

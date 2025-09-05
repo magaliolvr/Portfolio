@@ -1,7 +1,8 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
   margin: 0;
 
   color-scheme: light dark;
@@ -38,7 +39,7 @@ main {
   min-height: 100vh;
   margin: 0 auto;
   padding: 40px 32px;
-  max-width: 1200px;
+  max-width: 100%;
 }
 
 h1 {

@@ -6,17 +6,13 @@
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 48px;
-  border-bottom: solid 1px #f3f1f1;
+  // box-shadow: 1em -1px 2em 6px #bdb9b9;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 0.5px 2px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(255, 255, 255, 0.75);
-  border-radius: 12px;
-  border: 1px solid rgba(209, 213, 219, 0.3);
+  backdrop-filter: blur(7px) saturate(88%);
+  -webkit-backdrop-filter: blur(7px) saturate(88%);
 
   ul {
     list-style: none;
@@ -37,6 +33,20 @@
     font-weight: 600;
     font-size: 16px;
     display: flex;
+    transition: font-size 0.3s ease;
+  }
+
+  .header-title {
+    font-size: 60px;
+    color: #000000;
+    // text-shadow: -5px 2px 0px #859393;
+    font-family: "UnifrakturMaguntia", cursive;
+    font-weight: 700;
+    font-style: revert;
+    // word-break: break-all;
+    margin: 0 20px;
+    width: 10%;
+    transition: font-size 0.3s ease;
   }
 }
 
