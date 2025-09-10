@@ -1,3 +1,16 @@
+.display-flex{
+  display: flex;
+}
+
+.display-block{
+  display: block;
+}
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+}
+
 .flex-column {
   display: flex;
   flex-direction: column;
@@ -184,6 +197,10 @@
 
 .gap-xl {
   gap: 20px;
+}
+
+.gap-xxl{
+  gap: 24px;
 }
 
 .text-white {
