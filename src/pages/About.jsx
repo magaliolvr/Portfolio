@@ -3,7 +3,7 @@ import {useData} from '../hooks/useData';
 
 
 function About() {
-  const {items: aboutItems, isLoading } = useData('artworks/139911');
+  const {items: aboutItems, isLoading } = useData('artworks/24202');
 
   console.log("aboutItems", aboutItems);
 
@@ -40,7 +40,7 @@ function About() {
   return <>
 
     {aboutItems ?
-    (<div>
+    (<div key={aboutItems.data.id}>
     <img src={`https://www.artic.edu/iiif/2/${aboutItems?.data.image_id}/full/843,/0/default.jpg`} width={500} height={500} alt={aboutItems.data.thumbnail.alt_text} />
     <h2>{aboutItems.data.artist_display}</h2>
     <h3>{aboutItems.data.medium_display}</h3>
