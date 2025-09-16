@@ -30,6 +30,11 @@ function DefaultLayout() {
               <span>Case Studies</span>
             </Link>
           </li>
+          <li>
+            <Link to={"./contacts"}>
+              <span>Contact</span>
+            </Link>
+          </li>
         </ul>
       </HeaderNav>
       <main>
