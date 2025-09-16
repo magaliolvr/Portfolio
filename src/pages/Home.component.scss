@@ -1,6 +1,19 @@
 .home-brand {
-  font-size: 20vw;
-  color: white;
-  font-family: UnifrakturMaguntia, cursive;
-  //   text-shadow: -1vw 1vw 0.1vw #060606;
+  font-size: 14vw;
+  color: #746f6f;
+  font-family: AbrahamItalic, normal;
+  line-height: 0.8em;
+  position: absolute;
+  top: 130px;
+  transition: font-size 0.3s ease;
+
+
+  :nth-child(2) {
+    font-family: AbrahamOutlineItalic, normal;
+    display: block;
+    transition: font-size 0.3s ease;
+
+
+  }
+
 }
