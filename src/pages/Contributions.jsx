@@ -25,8 +25,6 @@ function Contributions() {
   //        (project) => !excluded.includes(project.title)
   // );
 
-  //quero unir artistas e todos os seus trabalhos
-
 
 
   return (
