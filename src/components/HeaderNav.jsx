@@ -4,15 +4,15 @@ import "./HeaderNav.component.scss";
 function HeaderNav({ title, children }) {
   const [fontSizes, setFontSizes] = useState({
     menu: "16px",
-    title: "60px",
+    title: "72px",
   });
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 80) {
-        setFontSizes({ menu: "10px", title: "35px" });
+        setFontSizes({ menu: "12px", title: "35px" });
       } else {
-        setFontSizes({ menu: "16px", title: "60px" });
+        setFontSizes({ menu: "16px", title: "72px" });
       }
     };
     window.addEventListener("scroll", handleScroll);
