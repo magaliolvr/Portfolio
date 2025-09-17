@@ -1,6 +1,5 @@
 import { BsLinkedin, BsFillEnvelopeFill, BsWhatsapp, BsGithub } from "react-icons/bs";
 import { useScrollPages } from "../hooks/useScrollPages";
-import { Card } from "../components/card";
 
 
 
@@ -11,7 +10,6 @@ function Contacts() {
 
         <div>
             <h2>Contact Me</h2>
-
             <ul>
                 <li>
                     <a href="mailto:contact.magalioliveira@gmail.com?subject=Contact%20from%20site%20&body=Hi,%20Magali!%0A%0A%0AI%20visited%20your%20portfolio,%20... ">
