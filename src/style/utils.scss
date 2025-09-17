@@ -1,12 +1,12 @@
-.display-flex{
+.display-flex {
   display: flex;
 }
 
-.display-block{
+.display-block {
   display: block;
 }
 
-.flex-row{
+.flex-row {
   display: flex;
   flex-direction: row;
 }
@@ -183,6 +183,7 @@
 .gap-xs {
   gap: 4px;
 }
+
 .gap-s {
   gap: 8px;
 }
@@ -199,7 +200,7 @@
   gap: 20px;
 }
 
-.gap-xxl{
+.gap-xxl {
   gap: 24px;
 }
 
@@ -215,4 +216,14 @@
   display: flex;
   position: relative;
   margin-bottom: 40px;
+}
+
+.section-2col {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 24px;
+
+  &.col2 {
+    padding: 24px;
+  }
 }

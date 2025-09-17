@@ -1,8 +1,11 @@
 import { BsLinkedin, BsFillEnvelopeFill, BsWhatsapp, BsGithub } from "react-icons/bs";
+import { useScrollPages } from "../hooks/useScrollPages";
 
 
 
 function Contacts() {
+    useScrollPages({ next: null, previous: "/casestudies" })
+
     return (
 
         <div>

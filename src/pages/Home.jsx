@@ -1,9 +1,13 @@
 import "./Home.component.scss";
 import { useState, useEffect } from "react";
 import { Blob } from "../components/Blob";
+import { useNavigate } from "react-router-dom";
+import { useScrollPages } from "../hooks/useScrollPages"
+
 
 
 function Home() {
+  useScrollPages({ next: "/about", previous: null });
   const [text, setDisplay] = useState({
     display: "block",
     font: "14vw"
@@ -24,13 +28,45 @@ function Home() {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [])
+
+
+
+  // // / Detect scroll to bottom
+
+  // useEffect(() => {
+
+  //   const handleScroll = () => {
+
+  //     const scrollHeight = document.documentElement.scrollHeight;
+
+  //     const scrollTop = window.scrollY;
+
+  //     const clientHeight = window.innerHeight;
+
+
+
+  //     if (scrollTop + clientHeight >= scrollHeight - 50) {
+
+  //       // Reached near bottom
+
+  //       navigate(`/about`);
+
+  //     }
+
+  //   };
+
+  //   window.addEventListener('scroll', handleScroll);
+
+  //   return () => window.removeEventListener('scroll', handleScroll);
+
+  // }, [navigate]);
 
 
 
 
   return <>
-    <Blob />
+    <Blob type="color" color="#ef1f8b" />
     <div className="home-brand" style={{ display: text.display, fontSize: text.font }}>
       <span>Mag</span>
       <span>Olvr</span>

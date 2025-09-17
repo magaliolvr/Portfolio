@@ -1,21 +1,21 @@
 import React from 'react';
 import { useData } from '../hooks/useData';
+import { useScrollPages } from '../hooks/useScrollPages';
+import { Card } from '../components/card';
 
 
 function Contributions() {
+  useScrollPages({ next: "/casestudies", previous: "/about" })
 
-
-  const { items: artistsNames, isLoading: loadingArtists } = useData('artists?page=2&limit=15');
   const { items: artworksItems, isLoading: loadingArts } = useData('artworks?page=2&limit=15')
-  console.log("Passei por Contributions Artists :", artistsNames, loadingArtists);
   console.log("Passei por contributions Artworks :", artworksItems, loadingArts)
 
-  if (loadingArtists || !artistsNames) {  //|| !artistsNames.data
+  if (loadingArts || !artworksItems) {  //|| !artistsNames.data
     return <div>Loading info...</div>;
   }
 
   //filtrar apenas artistas com nome 
-  const withArtistName = artistsNames.data.filter( // o filter ja cria um array por default
+  const withArtistName = artworksItems.data.filter( // o filter ja cria um array por default
     (project) => project.title !== "Unknown artist" &&
       project.title !== "Anonymous");
 
@@ -30,20 +30,20 @@ function Contributions() {
   return (
     <>
 
-      {withArtistName.map((artist) => {
-        return <>
-          <ul>
-            <li>
-              <div key={artist.id}>{artist.title}</div>
-            </li>
-          </ul>
-
-        </>
-
-      }
-      )
-
-      }
+      <ul className='animated-timeline'>
+        {withArtistName.map((art) => {
+          return <li>
+            <Card
+              key={art.id}
+              title={art.artist_title}
+              content={art.medium_display}
+            >
+            </Card>
+          </li>
+        }
+        )
+        }
+      </ul>
 
 
 
