@@ -1,8 +1,7 @@
 import React from 'react';
+import Card from "./components/Card.jsx"
 import { useData } from '../hooks/useData';
 import { useScrollPages } from '../hooks/useScrollPages';
-import { Card } from '../components/card';
-
 
 function Contributions() {
   useScrollPages({ next: "/casestudies", previous: "/about" })
