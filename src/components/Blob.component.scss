@@ -1,9 +1,8 @@
 .blob {
     padding: 30px;
-    width: 100vh;
     justify-self: anchor-center;
-    height: 100vh;
-    background: #746f6f;
+    background-size: cover;
+    background-position: center;
     animation: morph 12.5s linear infinite alternate, rotate 15s linear infinite;
 
 
@@ -22,13 +21,24 @@
 
     }
 
-    @keyframes rotate {
-        from {
-            transform: rotate(0deg);
-        }
 
-        to {
-            transform: rotate(360deg);
+    &.blob-color {
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
     }
+
+    &.blob-image {
+        animation: morph 12.5s linear infinite alternate;
+
+    }
+
+
+
 }

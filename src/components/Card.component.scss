@@ -1,0 +1,58 @@
+.card {
+    width: 80vh;
+    height: auto;
+    border-radius: 4px;
+    border: solid 1px #d2c9b4;
+    margin-bottom: 24px;
+
+    &-title {
+        background: #d2c9b4;
+        padding: 12px;
+    }
+
+    &-content {
+        padding: 12px;
+    }
+
+
+}
+
+
+.animated-timeline {
+    justify-items: center;
+
+    li .card:nth-child(odd) {
+        animation: slideInLeft linear forwards;
+        animation-timeline: view();
+        animation-range: 100px 250px;
+    }
+
+    // Even items → animam da direita
+
+    li .card:nth-child(even) {
+        animation: slideInRight linear forwards;
+        animation-timeline: view();
+        animation-range: 100px 250px;
+    }
+}
+
+// 🔑 Keyframes sempre fora de qualquer seletor
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

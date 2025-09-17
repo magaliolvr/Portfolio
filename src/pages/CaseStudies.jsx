@@ -1,7 +1,9 @@
 import React from 'react';
 import { useData } from '../hooks/useData';
+import { useScrollPages } from '../hooks/useScrollPages';
 
 function CaseStudies() {
+    useScrollPages({ next: "/contacts", previous: "/contributions" })
     const { items: projectItems, isLoading } = useData('artworks');
     console.log("Passei por case Studies :", projectItems, isLoading);
 

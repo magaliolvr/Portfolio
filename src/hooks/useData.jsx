@@ -1,4 +1,3 @@
-import React from "react";
 import { useState, useEffect } from "react";
 
 export const useData = (type) => {
@@ -11,17 +10,17 @@ export const useData = (type) => {
   useEffect(() => {
     const fetchData = async () => {
 
-        setIsLoading(true);
-        
+      setIsLoading(true);
+
       try {
         const data = await fetch(`https://api.artic.edu/api/v1/${type}`);
         const newDataList = await data.json();
-        
+
         // console.log("new " + `${type}` + " list", newDataList);
-        
+
         setItems(newDataList.results || newDataList); // Se newDataList.results for undefined, usa newDataList
-      
-    } catch (error) {
+
+      } catch (error) {
         console.log("error", error);
 
 
