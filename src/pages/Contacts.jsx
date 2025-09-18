@@ -8,7 +8,7 @@ function Contacts() {
 
     return (
 
-        <div>
+        <div className="flex-column justify-end items-end">
             <h2>Contact Me</h2>
             <ul>
                 <li>
