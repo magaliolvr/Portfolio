@@ -17,9 +17,8 @@
 
 }
 
-
 .animated-timeline {
-    justify-items: center;
+    justify-items: end;
 
     li .card:nth-child(odd) {
         animation: slideInLeft linear forwards;

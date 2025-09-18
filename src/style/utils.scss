@@ -220,7 +220,7 @@
 
 .section-2col {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(50vh, 1fr));
   gap: 24px;
 
   &.col2 {
