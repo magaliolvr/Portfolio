@@ -1,8 +1,7 @@
 import React from 'react';
 import { useData } from '../hooks/useData';
 import { useScrollPages } from '../hooks/useScrollPages';
-import { Card } from '../components/card';
-
+import { Card1 } from '../components/Card1';
 
 function Contributions() {
   useScrollPages({ next: "/casestudies", previous: "/about" })
@@ -33,12 +32,12 @@ function Contributions() {
       <ul className='animated-timeline'>
         {withArtistName.map((art) => {
           return <li>
-            <Card
+            <Card1
               key={art.id}
               title={art.artist_title}
               content={art.medium_display}
             >
-            </Card>
+            </Card1>
           </li>
         }
         )
