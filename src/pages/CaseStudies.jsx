@@ -1,9 +1,11 @@
 import React from 'react';
 import { useData } from '../hooks/useData';
 import { useScrollPages } from '../hooks/useScrollPages';
+import { Gallery } from '../components/Gallery';
+import { Blob } from '../components/Blob';
 
 function CaseStudies() {
-    useScrollPages({ next: "/contacts", previous: "/contributions" })
+    // useScrollPages({ next: "/contacts", previous: "/contributions" })
     const { items: projectItems, isLoading } = useData('artworks');
     console.log("Passei por case Studies :", projectItems, isLoading);
 
@@ -18,24 +20,25 @@ function CaseStudies() {
 
     return (
         <>
-            {projectsWithImage.length > 0 ? ( // se existir projetos com imagens
-                projectsWithImage.map((project) => (
-                    <div key={project.id}>
-                        <h2>{project.department_title}</h2>
-                        <img
-                            src={`https://www.artic.edu/iiif/2/${project.image_id}/full/843,/0/default.jpg`}
-                            width={500}
-                            height={500}
-                            alt={project.alt_text || "Artwork image"}
-                        />
-                        <p>
-                            {project.medium_display}
-                        </p>
-                    </div>
-                ))
-            ) : (
-                <p>Nenhum projeto com imagem encontrado</p>
-            )}
+            {projectsWithImage.length > 0 ?
+                <Gallery items={projectsWithImage}>
+                    {(item) => (
+                        <>
+                            <h4>{item.department_title}</h4>
+                            <Blob type={"image"} image={`https://www.artic.edu/iiif/2/${item.image_id}/full/843,/0/default.jpg`} width={"50px"} height={50} />
+                            {/* <img
+                                src={`https://www.artic.edu/iiif/2/${item.image_id}/full/843,/0/default.jpg`}
+                                width={100}
+                                height={100}
+                                alt={item.alt_text || "Artwork image"}
+                             /> */}
+                            {/* <p>{item.medium_display}</p> */}
+                        </>
+                    )}
+                </Gallery>
+                : (
+                    <p>Nenhum projeto com imagem encontrado</p>
+                )}
         </>
     );
 }

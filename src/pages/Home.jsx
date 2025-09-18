@@ -7,7 +7,7 @@ import { useScrollPages } from "../hooks/useScrollPages"
 
 
 function Home() {
-  useScrollPages({ next: "/about", previous: null });
+  // useScrollPages({ next: "/about", previous: null });
   const [text, setDisplay] = useState({
     display: "block",
     font: "14vw"

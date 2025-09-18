@@ -4,7 +4,7 @@ import { useScrollPages } from '../hooks/useScrollPages';
 import { Card1 } from '../components/Card1';
 
 function Contributions() {
-  useScrollPages({ next: "/casestudies", previous: "/about" })
+  // useScrollPages({ next: "/casestudies", previous: "/about" })
 
   const { items: artworksItems, isLoading: loadingArts } = useData('artworks?page=2&limit=15')
   console.log("Passei por contributions Artworks :", artworksItems, loadingArts)

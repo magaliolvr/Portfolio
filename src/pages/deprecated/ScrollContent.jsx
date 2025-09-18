@@ -1,11 +1,11 @@
 // src/layouts/ScrollLayout.jsx
 import React, { useRef } from "react";
 import "../pages/ScrollContent.component.scss"
-import Home from "../pages/Home";
-import About from "../pages/About";
-import CaseStudies from "../pages/CaseStudies";
-import Contributions from "../pages/Contributions";
-import Contacts from "../pages/Contacts";
+import Home from "../Home";
+import About from "../About";
+import CaseStudies from "../CaseStudies";
+import Contributions from "../Contributions";
+import Contacts from "../Contacts";
 
 export default function ScrollLayout() {
     const sectionsRef = useRef([]);

@@ -26,9 +26,9 @@ function HeaderNav({ title, children }) {
       </span>
       <nav>
         {/* Espera-se que children inclua o ul.menu-list */}
-        {React.Children.map(children, (child) => {
+        {React.Children.map(children, (child) => { // Itera sobre os filhos
           if (React.isValidElement(child) && child.props.className && child.props.className.includes("menu-list")) {
-            return React.cloneElement(child, {
+            return React.cloneElement(child, { // Clona o elemento para adicionar estilos
               style: { fontSize: fontSizes.menu, ...(child.props.style || {}) },
             });
           }
@@ -36,7 +36,8 @@ function HeaderNav({ title, children }) {
         })}
       </nav>
     </header>
-  );
+  );// no return temos a seguinte configuraçao: o titulo que vem da props title e o children que espera um ul com a class menu-list. o react.children.map itera sobre os filhos e verifica se o filho é um elemento valido e se a className inclui menu-list. se sim, clona o elemento e adiciona o estilo de fontSize dinamico. senao retorna o proprio filho.
 }
 
 export default HeaderNav;
+

@@ -4,7 +4,7 @@ import { useScrollPages } from '../hooks/useScrollPages';
 import { Blob } from '../components/Blob';
 
 function About() {
-  useScrollPages({ next: "/contributions", previous: "/" });
+  // useScrollPages({ next: "/contributions", previous: "/" });
   const { items: aboutItems, isLoading } = useData('artworks/24202');
 
   console.log("aboutItems", aboutItems);
