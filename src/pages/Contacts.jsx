@@ -4,7 +4,7 @@ import { useScrollPages } from "../hooks/useScrollPages";
 
 
 function Contacts() {
-    useScrollPages({ next: null, previous: "/casestudies" })
+    // useScrollPages({ next: null, previous: "/casestudies" })
 
     return (
 

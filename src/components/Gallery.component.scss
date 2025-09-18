@@ -1,0 +1,8 @@
+.gallery-list ul {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50vh, 1fr));
+    gap: 32px;
+    justify-items: center;
+    max-width: calc(50vh * 5);
+}
