@@ -10,4 +10,3 @@ export function Card1({ title, content, child }) {
         </div>
     )
 }
-

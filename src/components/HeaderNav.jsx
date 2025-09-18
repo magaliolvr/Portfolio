@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./HeaderNav.component.scss";
+import useMediaQuery from "../hooks/useMediaQuery";
+
+
 
 function HeaderNav({ title, children }) {
   const [fontSizes, setFontSizes] = useState({
     menu: "16px",
     title: "0px",
   });
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,9 +30,9 @@ function HeaderNav({ title, children }) {
       </span>
       <nav>
         {/* Espera-se que children inclua o ul.menu-list */}
-        {React.Children.map(children, (child) => { // Itera sobre os filhos
+        {React.Children.map(children, (child) => {
           if (React.isValidElement(child) && child.props.className && child.props.className.includes("menu-list")) {
-            return React.cloneElement(child, { // Clona o elemento para adicionar estilos
+            return React.cloneElement(child, {
               style: { fontSize: fontSizes.menu, ...(child.props.style || {}) },
             });
           }

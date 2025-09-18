@@ -21,9 +21,9 @@ function Home() {
       } else if (window.scrollY > 80) {
         setDisplay({ display: "block", font: "5vw" });
       } else if (window.scrollY > 30) {
-        setDisplay({ display: "block", font: "10vw" });
+        setDisplay({ display: "block", font: "8vw" });
       } else {
-        setDisplay({ display: "block", font: "14vw" })
+        setDisplay({ display: "block", font: "10vw" })
       };
     };
     window.addEventListener("scroll", handleScroll);
@@ -66,7 +66,7 @@ function Home() {
 
 
   return <>
-    <Blob type="color" color="#ef1f8b" />
+    <Blob type="color" color="" />
     <div className="home-brand" style={{ display: text.display, fontSize: text.font }}>
       <span>Mag</span>
       <span>Olvr</span>

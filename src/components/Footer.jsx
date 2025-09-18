@@ -4,7 +4,7 @@ import "./Footer.scss"
 function Footer() {
   return (
     <footer>
-      <p>© 2025 React Explorer. All rights reserved.</p>
+      <p>© 2025 Magali Oliveira. All rights reserved.</p>
     </footer>
   );
 }

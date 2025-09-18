@@ -45,7 +45,7 @@ function About() {
       (<div className='section-2col' key={aboutItems.data.id}>
 
         <div className='col1'>
-          <Blob type={"image"} image={"/src/assets/mee.jpeg"} width={"500px"} height={500} />
+          <Blob type={"image"} image={"/src/assets/mee.jpeg"} width={"50vh"} height={"50vh"} />
           {/* <img src={`https://www.artic.edu/iiif/2/${aboutItems?.data.image_id}/full/843,/0/default.jpg`} width={500} height={500} alt={aboutItems.data.thumbnail.alt_text} /> */}
 
         </div>
